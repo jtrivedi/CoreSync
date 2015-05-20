@@ -94,7 +94,6 @@
 - (void)returnTargetWithKeyPath:(NSString *)keyPath completionBlock:(void (^)(id target, NSString* lastComponent))completionBlock
 {
     NSMutableArray* components = [keyPath componentsSeparatedByString:@"."].mutableCopy;
-    
     NSString* lastComponent = [components lastObject];
     
     id target = self;
@@ -106,8 +105,7 @@
         
         if ([pathComponent containsString:@"["]) {
             NSString* component = pathComponent;
-            component = [component stringByReplacingOccurrencesOfString:@"[" withString:@""];
-            component = [component stringByReplacingOccurrencesOfString:@"]" withString:@""];
+            component = [self stripBrackets:component];
             
             target = target[[component intValue]];
         }
@@ -117,13 +115,18 @@
     }
     
     if ([lastComponent containsString:@"["]) {
-        lastComponent = [lastComponent stringByReplacingOccurrencesOfString:@"[" withString:@""];
-        lastComponent = [lastComponent stringByReplacingOccurrencesOfString:@"]" withString:@""];
+        lastComponent = [self stripBrackets:lastComponent];
     }
     
     completionBlock(target, lastComponent);
 }
 
+- (NSString *)stripBrackets:(NSString *)string
+{
+    string = [string stringByReplacingOccurrencesOfString:@"[" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"]" withString:@""];
+    return string;
+}
 
 - (BOOL)isValueFromKeyPathArray:(NSString *)keyPath
 {

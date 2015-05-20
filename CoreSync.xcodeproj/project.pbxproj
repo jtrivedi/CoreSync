@@ -13,6 +13,7 @@
 		F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */; };
 		F77757F61B09249B0001FB9B /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757F51B09249B0001FB9B /* TestController.m */; };
 		F77757FA1B0A6C2B0001FB9B /* json.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = F77757F91B0A6B260001FB9B /* json.txt */; };
+		F779557C1B0C4CEC00359E79 /* CoreSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F779557B1B0C4CEC00359E79 /* CoreSyncTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,10 +41,20 @@
 		F77757F41B09249B0001FB9B /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		F77757F51B09249B0001FB9B /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		F77757F91B0A6B260001FB9B /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
+		F77955771B0C4CEC00359E79 /* CoreSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F779557A1B0C4CEC00359E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F779557B1B0C4CEC00359E79 /* CoreSyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreSyncTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F77757DE1B0802E40001FB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F77955741B0C4CEC00359E79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				F77757E31B0802E40001FB9B /* CoreSync */,
+				F77955781B0C4CEC00359E79 /* CoreSyncTests */,
 				F77757E21B0802E40001FB9B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F77757E11B0802E40001FB9B /* CoreSync */,
+				F77955771B0C4CEC00359E79 /* CoreSyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +97,23 @@
 				F77757F91B0A6B260001FB9B /* json.txt */,
 			);
 			path = CoreSync;
+			sourceTree = "<group>";
+		};
+		F77955781B0C4CEC00359E79 /* CoreSyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				F779557B1B0C4CEC00359E79 /* CoreSyncTests.m */,
+				F77955791B0C4CEC00359E79 /* Supporting Files */,
+			);
+			path = CoreSyncTests;
+			sourceTree = "<group>";
+		};
+		F77955791B0C4CEC00359E79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F779557A1B0C4CEC00359E79 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +136,23 @@
 			productReference = F77757E11B0802E40001FB9B /* CoreSync */;
 			productType = "com.apple.product-type.tool";
 		};
+		F77955761B0C4CEC00359E79 /* CoreSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F779557D1B0C4CEC00359E79 /* Build configuration list for PBXNativeTarget "CoreSyncTests" */;
+			buildPhases = (
+				F77955731B0C4CEC00359E79 /* Sources */,
+				F77955741B0C4CEC00359E79 /* Frameworks */,
+				F77955751B0C4CEC00359E79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreSyncTests;
+			productName = CoreSyncTests;
+			productReference = F77955771B0C4CEC00359E79 /* CoreSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +163,9 @@
 				ORGANIZATIONNAME = "Styled Syntax";
 				TargetAttributes = {
 					F77757E01B0802E40001FB9B = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F77955761B0C4CEC00359E79 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -133,9 +183,20 @@
 			projectRoot = "";
 			targets = (
 				F77757E01B0802E40001FB9B /* CoreSync */,
+				F77955761B0C4CEC00359E79 /* CoreSyncTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F77955751B0C4CEC00359E79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F77757DD1B0802E40001FB9B /* Sources */ = {
@@ -147,6 +208,14 @@
 				F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */,
 				F77757ED1B0803190001FB9B /* CoreSync.m in Sources */,
 				F77757F61B09249B0001FB9B /* TestController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F77955731B0C4CEC00359E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F779557C1B0C4CEC00359E79 /* CoreSyncTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +313,38 @@
 			};
 			name = Release;
 		};
+		F779557E1B0C4CEC00359E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F779557F1B0C4CEC00359E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -264,6 +365,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F779557D1B0C4CEC00359E79 /* Build configuration list for PBXNativeTarget "CoreSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F779557E1B0C4CEC00359E79 /* Debug */,
+				F779557F1B0C4CEC00359E79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
