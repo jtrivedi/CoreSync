@@ -11,6 +11,7 @@
 
 @implementation CoreSyncTransaction
 
+
 - (instancetype)initWithTransactionType:(CSTransactionType)type
                                 keyPath:(NSString *)keyPath
                                   value:(NSObject *)value {
