@@ -1,0 +1,50 @@
+{
+  "transactions" : [
+    {
+      "op" : "replace",
+      "path" : "\/a",
+      "value" : "b"
+    },
+    {
+      "op" : "remove",
+      "path" : "\/b"
+    },
+    {
+      "op" : "replace",
+      "path" : "\/d\/key1",
+      "value" : "val2"
+    },
+    {
+      "op" : "remove",
+      "path" : "\/d\/key2"
+    },
+    {
+      "op" : "add",
+      "path" : "\/d\/key3",
+      "value" : "val3"
+    },
+    {
+      "op" : "replace",
+      "path" : "\/e\/1",
+      "value" : 2
+    },
+    {
+      "op" : "remove",
+      "path" : "\/e\/2\/b"
+    },
+    {
+      "op" : "add",
+      "path" : "\/e\/2\/c",
+      "value" : "e"
+    },
+    {
+      "op" : "remove",
+      "path" : "\/e\/3"
+    },
+    {
+      "op" : "add",
+      "path" : "\/c",
+      "value" : 3
+    }
+  ]
+}
