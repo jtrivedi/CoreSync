@@ -89,16 +89,14 @@ static const BOOL kShouldLog = NO;
 
 - (void)testDiff
 {
-//    NSMutableDictionary* a = [self a];
-//    NSMutableDictionary* b = [self b];
-//    
-//    self.transactions = [[NSMutableArray alloc] init];
-//    
-//    [self diffDictionary:a :b root:@""];
-//
-////    [self transactionsToDictionary:YES];
-//    
-//    assert([a isEqualToDictionary:b] && a != b);
+    NSMutableDictionary* a = [self a];
+    NSMutableDictionary* b = [self b];
+    
+    NSString* jsonChanges = [[[self diff:a :b] mutableCopy] json];
+    
+    [self patch:a withJSON:jsonChanges];
+    
+    assert([a isEqualToDictionary:b]);
 }
 
 - (NSDictionary *)dictionaryFromTransactions:(NSMutableArray *)transactions
@@ -304,7 +302,7 @@ static const BOOL kShouldLog = NO;
 - (instancetype)init
 {
     if (self == [super init]) {
-//        [self testDiff];
+        [self testDiff];
     }
     
     return self;
