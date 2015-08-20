@@ -11,13 +11,8 @@
 
 @interface CoreSync : NSObject
 
-+ (CoreSync *)sharedManager;
++ (NSDictionary *)diff:(id)a :(id)b;
 
-- (NSDictionary *)diff:(id)a :(id)b;
-
-- (void)patch:(NSDictionary *)a withJSON:(NSString *)json;
-
-- (NSMutableDictionary *)a;
-- (NSMutableDictionary *)b;
++ (void)patch:(NSDictionary *)a withJSON:(NSString *)json;
 
 @end

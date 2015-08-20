@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import "CoreSync.h"
 
 @interface CoreSyncTests : XCTestCase
 
@@ -15,25 +16,67 @@
 
 @implementation CoreSyncTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+#pragma mark - Tests
+
+- (void)testDiffAndPatch
+{
+    NSMutableDictionary* a = [self a];
+    NSMutableDictionary* b = [self b];
+    
+    NSString* jsonChanges = [[[CoreSync diff:a :b] mutableCopy] json];
+    
+    assert(![a isEqualToDictionary:b]);
+    
+    [CoreSync patch:a withJSON:jsonChanges];
+    
+    assert([a isEqualToDictionary:b]);
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+
+#pragma mark - Private
+
+- (NSMutableDictionary *)a
+{
+    return @{
+             @"a" : @"a",
+             @"b" : @2,
+             @"d" : @{
+                     @"key1" : @"val1",
+                     @"key2" : @"val2",
+                     @"key4" : @"val4",
+                     }.mutableCopy,
+             @"e" : @[
+                     @1, @3, @{
+                         @"a" : @"b", @"b" : @"bVal", @"d" : @"dVal1",
+                         }.mutableCopy,
+                     @5,
+                     ].mutableCopy,
+             }.mutableCopy;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (NSMutableDictionary *)b
+{
+    return @{
+             @"a" : @"b",
+             @"c": @3,
+             @"d" : @{
+                     @"key1" : @"val2",
+                     @"key3" : @"val3",
+                     @"key4" : @"val4",
+                     }.mutableCopy,
+             @"e" : @[
+                     @1, @2, @{
+                         @"a" : @"b", @"c" : @"e", @"d" : @"dVal2",
+                         }.mutableCopy,
+                     ].mutableCopy,
+             }.mutableCopy;
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
+- (void)testDiffPerformance
+{
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        [self testDiffAndPatch];
     }];
 }
 

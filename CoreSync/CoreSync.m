@@ -1,4 +1,3 @@
-
 //
 //  CoreSync.m
 //  CoreSync
@@ -11,35 +10,21 @@
 #import "CoreSyncTransaction.h"
 #import "NSMutableDictionary+CoreSync.h"
 
-
 @implementation CoreSync
 
-static const BOOL kShouldLog = NO;
-
-
-+ (CoreSync *)sharedManager
-{
-    static CoreSync* sharedManager = nil;
-    static dispatch_once_t isDispatched;
-    
-    dispatch_once(&isDispatched, ^{
-        sharedManager = [[CoreSync alloc] init];
-    });
-    
-    return sharedManager;
-}
+static const BOOL kShouldLog = YES;
 
 
 #pragma mark - Public API
 
-- (NSDictionary *)diff:(id)a :(id)b
++ (NSDictionary *)diff:(id)a :(id)b
 {
     NSMutableArray* diffTransactions = [self diffDictionary:a :b root:@""];
 
     return [self dictionaryFromTransactions:diffTransactions];
 }
 
-- (void)patch:(NSMutableDictionary *)a withJSON:(NSString *)json
++ (void)patch:(NSMutableDictionary *)a withJSON:(NSString *)json
 {
     NSDictionary* transactions = [NSMutableDictionary dictionaryWithJSON:json][@"transactions"];
     
@@ -50,56 +35,7 @@ static const BOOL kShouldLog = NO;
 }
 
 
-#pragma mark - Test
-
-- (NSMutableDictionary *)a {
-    return @{
-             @"a" : @"a",
-             @"b" : @2,
-             @"d" : @{
-                     @"key1" : @"val1",
-                     @"key2" : @"val2",
-                     @"key4" : @"val4",
-                     }.mutableCopy,
-             @"e" : @[
-                        @1, @3, @{
-                                @"a" : @"b", @"b" : @"bVal", @"d" : @"dVal1",
-                                }.mutableCopy,
-                        @5,
-                     ].mutableCopy,
-             }.mutableCopy;
-}
-
-- (NSMutableDictionary *)b {
-    return @{
-             @"a" : @"b",
-             @"c": @3,
-             @"d" : @{
-                     @"key1" : @"val2",
-                     @"key3" : @"val3",
-                     @"key4" : @"val4",
-                     }.mutableCopy,
-             @"e" : @[
-                        @1, @2, @{
-                                @"a" : @"b", @"c" : @"e", @"d" : @"dVal2",
-                                }.mutableCopy,
-                      ].mutableCopy,
-             }.mutableCopy;
-}
-
-- (void)testDiff
-{
-    NSMutableDictionary* a = [self a];
-    NSMutableDictionary* b = [self b];
-    
-    NSString* jsonChanges = [[[self diff:a :b] mutableCopy] json];
-    
-    [self patch:a withJSON:jsonChanges];
-    
-    assert([a isEqualToDictionary:b]);
-}
-
-- (NSDictionary *)dictionaryFromTransactions:(NSMutableArray *)transactions
++ (NSDictionary *)dictionaryFromTransactions:(NSMutableArray *)transactions
 {
     NSMutableDictionary* transactionDictionary = [[NSMutableDictionary alloc] init];
     [transactionDictionary setObject:[[NSMutableArray alloc] init] forKey:@"transactions"];
@@ -111,28 +47,28 @@ static const BOOL kShouldLog = NO;
     return transactionDictionary;
 }
 
-- (CoreSyncTransaction *)editWithPath:(id)path value:(NSObject *)value
++ (CoreSyncTransaction *)editWithPath:(id)path value:(NSObject *)value
 {
     return [[CoreSyncTransaction alloc] initWithTransactionType:CSTransactionTypeEdit
                                                         keyPath:path
                                                           value:value];
 }
 
-- (CoreSyncTransaction *)deletionWithPath:(id)path
++ (CoreSyncTransaction *)deletionWithPath:(id)path
 {
     return [[CoreSyncTransaction alloc] initWithTransactionType:CSTransactionTypeDeletion
                                                         keyPath:path
                                                           value:nil];
 }
 
-- (CoreSyncTransaction *)additionWithPath:(id)path value:(NSObject *)value
++ (CoreSyncTransaction *)additionWithPath:(id)path value:(NSObject *)value
 {
     return [[CoreSyncTransaction alloc] initWithTransactionType:CSTransactionTypeAddition
                                                         keyPath:path
                                                           value:value];
 }
 
-- (NSMutableArray *)diffDictionary:(NSMutableDictionary *)a :(NSMutableDictionary *)b root:(NSString *)root
++ (NSMutableArray *)diffDictionary:(NSMutableDictionary *)a :(NSMutableDictionary *)b root:(NSString *)root
 {
     NSMutableArray* transactions = [[NSMutableArray alloc] init];
     
@@ -194,7 +130,7 @@ static const BOOL kShouldLog = NO;
     return transactions;
 }
 
-- (NSMutableArray *)diffArray:(NSArray *)a :(NSArray *)b root:(NSString *)root
++ (NSMutableArray *)diffArray:(NSArray *)a :(NSArray *)b root:(NSString *)root
 {
     NSMutableArray* transactions = [[NSMutableArray alloc] init];
     
@@ -255,7 +191,7 @@ static const BOOL kShouldLog = NO;
     return transactions;
 }
 
-- (BOOL)areEqual:(NSObject *)a :(NSObject *)b
++ (BOOL)areEqual:(NSObject *)a :(NSObject *)b
 {
     if (! [self areEqualType:a :b]) {
         return NO;
@@ -269,7 +205,7 @@ static const BOOL kShouldLog = NO;
     }
 }
 
-- (BOOL)areEqualValue:(NSObject *)a :(NSObject *)b
++ (BOOL)areEqualValue:(NSObject *)a :(NSObject *)b
 {
     if ([a isKindOfClass:[NSString class]]) {
         return [(NSString *)a isEqualToString:(NSString *)b];
@@ -287,25 +223,25 @@ static const BOOL kShouldLog = NO;
     return NO;
 }
 
-- (BOOL)areEqualType:(NSObject *)a :(NSObject *)b
++ (BOOL)areEqualType:(NSObject *)a :(NSObject *)b
 {
     return [a class] == [b class];
 }
 
-- (NSArray *)sortedKeys:(NSDictionary *)dictionary
++ (NSArray *)sortedKeys:(NSDictionary *)dictionary
 {
     return [dictionary.allKeys sortedArrayUsingComparator:^(id aK, id bK) {
         return [aK compare:bK options:NSNumericSearch];
     }];
 }
 
-- (instancetype)init
-{
-    if (self == [super init]) {
-        [self testDiff];
-    }
-    
-    return self;
-}
+//+ (instancetype)init
+//{
+//    if (self == [super init]) {
+//        [self testDiff];
+//    }
+//    
+//    return self;
+//}
 
 @end
