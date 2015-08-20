@@ -197,12 +197,7 @@ static const BOOL kShouldLog = YES;
         return NO;
     }
     
-    if ([self areEqualValue:a :b]) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
+    return [self areEqualValue:a :b];
 }
 
 + (BOOL)areEqualValue:(NSObject *)a :(NSObject *)b
