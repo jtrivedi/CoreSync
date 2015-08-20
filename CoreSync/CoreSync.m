@@ -235,13 +235,4 @@ static const BOOL kShouldLog = YES;
     }];
 }
 
-//+ (instancetype)init
-//{
-//    if (self == [super init]) {
-//        [self testDiff];
-//    }
-//    
-//    return self;
-//}
-
 @end
