@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F77757E51B0802E40001FB9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757E41B0802E40001FB9B /* main.m */; };
 		F77757ED1B0803190001FB9B /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EC1B0803190001FB9B /* CoreSync.m */; };
 		F77757F01B085A370001FB9B /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */; };
 		F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */; };
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		F77757E11B0802E40001FB9B /* CoreSync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreSync; sourceTree = BUILT_PRODUCTS_DIR; };
-		F77757E41B0802E40001FB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F77757EB1B0803190001FB9B /* CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSync.h; sourceTree = "<group>"; };
 		F77757EC1B0803190001FB9B /* CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSync.m; sourceTree = "<group>"; };
 		F77757EE1B085A370001FB9B /* CoreSyncTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSyncTransaction.h; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 		F77757E31B0802E40001FB9B /* CoreSync */ = {
 			isa = PBXGroup;
 			children = (
-				F77757E41B0802E40001FB9B /* main.m */,
 				F77757EB1B0803190001FB9B /* CoreSync.h */,
 				F77757EC1B0803190001FB9B /* CoreSync.m */,
 				F77757EE1B085A370001FB9B /* CoreSyncTransaction.h */,
@@ -198,7 +195,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77757F01B085A370001FB9B /* CoreSyncTransaction.m in Sources */,
-				F77757E51B0802E40001FB9B /* main.m in Sources */,
 				F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */,
 				F77757ED1B0803190001FB9B /* CoreSync.m in Sources */,
 			);
