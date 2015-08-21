@@ -12,21 +12,46 @@
 
 @implementation CoreSync
 
-static const BOOL kShouldLog = YES;
+static const BOOL kShouldLog = NO;
 
 
-#pragma mark - Public API
+#pragma mark - Diff API
 
-+ (NSDictionary *)diff:(id)a :(id)b
++ (NSArray *)diffAsTransactions:(NSMutableDictionary *)a :(NSMutableDictionary *)b
 {
-    NSMutableArray* diffTransactions = [self diffDictionary:a :b root:@""];
+    return [self diffDictionary:a :b root:@""];
+}
 
-    return [self dictionaryFromTransactions:diffTransactions];
++ (NSArray *)diffAsDictionary:(NSMutableDictionary *)a :(NSMutableDictionary *)b
+{
+    NSMutableArray* transactions = [self diffDictionary:a :b root:@""];
+    
+    return [self serializeTransactionsToArray:transactions];
+}
+
++ (NSString *)diffAsJSON:(NSMutableDictionary *)a :(NSMutableDictionary *)b
+{
+    NSMutableArray* transactions = [self diffDictionary:a :b root:@""];
+    
+    NSArray* toArray = [self serializeTransactionsToArray:transactions];
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:toArray options:NSJSONWritingPrettyPrinted error:nil];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
+
+#pragma mark - Patch API
+
++ (void)patch:(NSMutableDictionary *)a withTransactions:(NSArray *)transactions
+{
+    for (CoreSyncTransaction* transaction in transactions) {
+        [a applyTransaction:transaction];
+    }
 }
 
 + (void)patch:(NSMutableDictionary *)a withJSON:(NSString *)json
 {
-    NSDictionary* transactions = [NSMutableDictionary dictionaryWithJSON:json][@"transactions"];
+    NSDictionary* transactions = [NSMutableDictionary dictionaryWithJSON:json];
     
     for (NSDictionary* transactionDict in transactions) {
         CoreSyncTransaction* transaction = [[CoreSyncTransaction alloc] initWithDictionary:transactionDict];
@@ -35,16 +60,17 @@ static const BOOL kShouldLog = YES;
 }
 
 
-+ (NSDictionary *)dictionaryFromTransactions:(NSMutableArray *)transactions
+#pragma mark - Private functions
+
++ (NSArray *)serializeTransactionsToArray:(NSMutableArray *)transactions
 {
-    NSMutableDictionary* transactionDictionary = [[NSMutableDictionary alloc] init];
-    [transactionDictionary setObject:[[NSMutableArray alloc] init] forKey:@"transactions"];
-    
+    NSMutableArray* transactionDictionaries = [[NSMutableArray alloc] init];
     for (CoreSyncTransaction* transaction in transactions) {
-        [transactionDictionary[@"transactions"] addObject:[transaction toDictionary]];
+        [transactionDictionaries addObject:transaction.toDictionary];
     }
     
-    return transactionDictionary;
+    NSData* data = [NSJSONSerialization dataWithJSONObject:transactionDictionaries options:0 error:nil];
+    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 }
 
 + (CoreSyncTransaction *)editWithPath:(id)path value:(NSObject *)value
@@ -67,6 +93,9 @@ static const BOOL kShouldLog = YES;
                                                         keyPath:path
                                                           value:value];
 }
+
+
+#pragma mark - Core Diff Algorithm
 
 + (NSMutableArray *)diffDictionary:(NSMutableDictionary *)a :(NSMutableDictionary *)b root:(NSString *)root
 {

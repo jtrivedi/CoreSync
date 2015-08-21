@@ -10,7 +10,6 @@
 
 @implementation NSMutableDictionary (CoreSync)
 
-
 - (void)applyTransaction:(CoreSyncTransaction *)transaction
 {
     switch (transaction.transactionType) {

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Styled Syntax. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import "CoreSync.h"
 
@@ -19,17 +18,31 @@
 
 #pragma mark - Tests
 
-- (void)testDiffAndPatch
+- (void)testDiffAndPatchJSON
 {
     NSMutableDictionary* a = [self a];
     NSMutableDictionary* b = [self b];
     
-    NSString* jsonChanges = [[[CoreSync diff:a :b] mutableCopy] json];
+    NSString* JSONChanges = [CoreSync diffAsJSON:a :b];
     
     assert(![a isEqualToDictionary:b]);
+
+    [CoreSync patch:a withJSON:JSONChanges];
     
-    [CoreSync patch:a withJSON:jsonChanges];
-    
+    assert([a isEqualToDictionary:b]);
+}
+
+- (void)testDiffAndPatchTransactions
+{
+    NSMutableDictionary* a = [self a];
+    NSMutableDictionary* b = [self b];
+
+    NSArray* changes = [CoreSync diffAsTransactions:a :b];
+
+    assert(![a isEqualToDictionary:b]);
+
+    [CoreSync patch:a withTransactions:changes];
+
     assert([a isEqualToDictionary:b]);
 }
 
@@ -71,13 +84,6 @@
                          }.mutableCopy,
                      ].mutableCopy,
              }.mutableCopy;
-}
-
-- (void)testDiffPerformance
-{
-    [self measureBlock:^{
-        [self testDiffAndPatch];
-    }];
 }
 
 @end

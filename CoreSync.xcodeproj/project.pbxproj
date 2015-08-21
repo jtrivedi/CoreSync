@@ -11,7 +11,6 @@
 		F77757ED1B0803190001FB9B /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EC1B0803190001FB9B /* CoreSync.m */; };
 		F77757F01B085A370001FB9B /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */; };
 		F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */; };
-		F77757FA1B0A6C2B0001FB9B /* json.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = F77757F91B0A6B260001FB9B /* json.txt */; };
 		F779557C1B0C4CEC00359E79 /* CoreSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F779557B1B0C4CEC00359E79 /* CoreSyncTests.m */; };
 		F7C1B1541B869705008D1E8F /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EC1B0803190001FB9B /* CoreSync.m */; };
 		F7C1B1551B869705008D1E8F /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */; };
@@ -25,7 +24,6 @@
 			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
-				F77757FA1B0A6C2B0001FB9B /* json.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -40,7 +38,6 @@
 		F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSyncTransaction.m; sourceTree = "<group>"; };
 		F77757F11B09203E0001FB9B /* NSMutableDictionary+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CoreSync.h"; sourceTree = "<group>"; };
 		F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CoreSync.m"; sourceTree = "<group>"; };
-		F77757F91B0A6B260001FB9B /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
 		F77955771B0C4CEC00359E79 /* CoreSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F779557A1B0C4CEC00359E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F779557B1B0C4CEC00359E79 /* CoreSyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreSyncTests.m; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 				F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */,
 				F77757F11B09203E0001FB9B /* NSMutableDictionary+CoreSync.h */,
 				F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */,
-				F77757F91B0A6B260001FB9B /* json.txt */,
 			);
 			path = CoreSync;
 			sourceTree = "<group>";
