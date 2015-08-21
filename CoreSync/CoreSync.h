@@ -20,7 +20,6 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "NSMutableDictionary+CoreSync.h"
 
 @interface CoreSync : NSObject
 
@@ -32,8 +31,8 @@
  *
  *  @return An array of CoreSyncTransaction objects that make up the difference between the two dictionaries.
  */
-+ (NSArray *)diffAsTransactions:(NSMutableDictionary *)a
-                               :(NSMutableDictionary *)b;
++ (NSArray *)diffAsTransactions:(NSDictionary *)a
+                               :(NSDictionary *)b;
 
 /**
  *  Calculates the delta between two NSMutableDictionary instances.
@@ -43,8 +42,8 @@
  *
  *  @return A JSON string representing an array of dictionaries representing CoreSyncTransaction objects.
  */
-+ (NSString *)diffAsJSON:(NSMutableDictionary *)a
-                        :(NSMutableDictionary *)b;
++ (NSString *)diffAsJSON:(NSDictionary *)a
+                        :(NSDictionary *)b;
 
 /**
  *  Sequentially applies each CoreSyncTransaction patch object in `transactions` to `a`. This "patches" `a`.
@@ -52,7 +51,7 @@
  *  @param a            The dictionary to be patched.
  *  @param transactions An array of CoreSyncTransaction objects.
  */
-+ (void)patch:(NSMutableDictionary *)a withTransactions:(NSArray *)transactions;
++ (NSDictionary *)patch:(NSDictionary *)a withTransactions:(NSArray *)transactions;
 
 /**
  *  Deserializes the `json` parameter into an array of CoreSyncTransactions objects, then applies each transaction to `a`.
@@ -60,6 +59,6 @@
  *  @param a    The dictionary to be patched.
  *  @param json The JSON string representing an array of JSON patches.
  */
-+ (void)patch:(NSDictionary *)a withJSON:(NSString *)json;
++ (NSDictionary *)patch:(NSDictionary *)a withJSON:(NSString *)json;
 
 @end

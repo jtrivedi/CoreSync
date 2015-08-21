@@ -20,7 +20,6 @@
 // THE SOFTWARE.
 
 #import "CoreSyncTransaction.h"
-#import "NSMutableDictionary+CoreSync.h"
 
 @implementation CoreSyncTransaction
 
