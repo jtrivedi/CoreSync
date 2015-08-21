@@ -22,6 +22,8 @@
 #import "CoreSync.h"
 #import "CoreSyncTransaction.h"
 #import "NSMutableDictionary+CoreSync.h"
+#import "NSArray+CoreSync.h"
+#import "NSDictionary+CoreSync.h"
 
 @implementation CoreSync
 
@@ -30,45 +32,51 @@ static const BOOL kShouldLog = NO;
 
 #pragma mark - Diff API
 
-+ (NSArray *)diffAsTransactions:(NSMutableDictionary *)a :(NSMutableDictionary *)b
++ (NSArray *)diffAsTransactions:(NSDictionary *)a :(NSDictionary *)b
 {
-    return [self diffDictionary:a :b root:@""];
+    return [self diffDictionary:[a mutableDeepCopy] :[b mutableDeepCopy] root:@""];
 }
 
-+ (NSArray *)diffAsDictionary:(NSMutableDictionary *)a :(NSMutableDictionary *)b
++ (NSArray *)diffAsDictionary:(NSDictionary *)a :(NSDictionary *)b
 {
-    NSMutableArray* transactions = [self diffDictionary:a :b root:@""];
+    NSMutableArray* transactions = [self diffDictionary:[a mutableDeepCopy] :[b mutableDeepCopy] root:@""];
     
     return [self serializeTransactionsToArray:transactions];
 }
 
-+ (NSString *)diffAsJSON:(NSMutableDictionary *)a :(NSMutableDictionary *)b
++ (NSString *)diffAsJSON:(NSDictionary *)a :(NSDictionary *)b
 {
-    NSMutableArray* transactions = [self diffDictionary:a :b root:@""];
+    NSMutableArray* transactions = [self diffDictionary:[a mutableDeepCopy] :[b mutableDeepCopy] root:@""];
     
     NSArray* toArray = [self serializeTransactionsToArray:transactions];
-    
+
     return [self toJSON:toArray];
 }
 
 
 #pragma mark - Patch API
 
-+ (void)patch:(NSMutableDictionary *)a withTransactions:(NSArray *)transactions
++ (NSDictionary *)patch:(NSDictionary *)a withTransactions:(NSArray *)transactions
 {
+    NSMutableDictionary* mutableA = [a mutableDeepCopy];
     for (CoreSyncTransaction* transaction in transactions) {
-        [a applyTransaction:transaction];
+        [mutableA applyTransaction:transaction];
     }
+    
+    return mutableA;
 }
 
-+ (void)patch:(NSMutableDictionary *)a withJSON:(NSString *)json
++ (NSDictionary *)patch:(NSDictionary *)a withJSON:(NSString *)json
 {
     NSDictionary* transactions = [NSMutableDictionary dictionaryWithJSON:json];
     
+    NSMutableDictionary* mutableA = [a mutableDeepCopy];
     for (NSDictionary* transactionDict in transactions) {
         CoreSyncTransaction* transaction = [[CoreSyncTransaction alloc] initWithDictionary:transactionDict];
-        [a applyTransaction:transaction];
+        [mutableA applyTransaction:transaction];
     }
+
+    return mutableA;
 }
 
 

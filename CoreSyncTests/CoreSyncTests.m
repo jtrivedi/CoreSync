@@ -33,28 +33,28 @@
 
 - (void)testDiffAndPatchJSON
 {
-    NSMutableDictionary* a = [self a];
-    NSMutableDictionary* b = [self b];
+    NSDictionary* a = [self a];
+    NSDictionary* b = [self b];
     
     NSString* JSONChanges = [CoreSync diffAsJSON:a :b];
     
     assert(![a isEqualToDictionary:b]);
 
-    [CoreSync patch:a withJSON:JSONChanges];
+    a = [CoreSync patch:a withJSON:JSONChanges];
     
     assert([a isEqualToDictionary:b]);
 }
 
 - (void)testDiffAndPatchTransactions
 {
-    NSMutableDictionary* a = [self a];
-    NSMutableDictionary* b = [self b];
+    NSDictionary* a = [self a];
+    NSDictionary* b = [self b];
 
     NSArray* changes = [CoreSync diffAsTransactions:a :b];
 
     assert(![a isEqualToDictionary:b]);
 
-    [CoreSync patch:a withTransactions:changes];
+    a = [CoreSync patch:a withTransactions:changes];
 
     assert([a isEqualToDictionary:b]);
 }
@@ -62,7 +62,7 @@
 
 #pragma mark - Private
 
-- (NSMutableDictionary *)a
+- (NSDictionary *)a
 {
     return @{
              @"a" : @"a",
@@ -71,17 +71,17 @@
                      @"key1" : @"val1",
                      @"key2" : @"val2",
                      @"key4" : @"val4",
-                     }.mutableCopy,
+                     },
              @"e" : @[
                      @1, @3, @{
                          @"a" : @"b", @"b" : @"bVal", @"d" : @"dVal1",
-                         }.mutableCopy,
+                         },
                      @5,
-                     ].mutableCopy,
-             }.mutableCopy;
+                     ],
+             };
 }
 
-- (NSMutableDictionary *)b
+- (NSDictionary *)b
 {
     return @{
              @"a" : @"b",
@@ -90,13 +90,13 @@
                      @"key1" : @"val2",
                      @"key3" : @"val3",
                      @"key4" : @"val4",
-                     }.mutableCopy,
+                     },
              @"e" : @[
                      @1, @2, @{
                          @"a" : @"b", @"c" : @"e", @"d" : @"dVal2",
-                         }.mutableCopy,
-                     ].mutableCopy,
-             }.mutableCopy;
+                         },
+                     ],
+             };
 }
 
 @end

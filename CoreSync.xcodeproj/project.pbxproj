@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70DB0FF1B87DFB000002933 /* NSDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F70DB0FE1B87DFB000002933 /* NSDictionary+CoreSync.m */; };
+		F70DB1021B87E0C800002933 /* NSArray+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F70DB1011B87E0C800002933 /* NSArray+CoreSync.m */; };
+		F70DB1031B87E21000002933 /* NSDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F70DB0FE1B87DFB000002933 /* NSDictionary+CoreSync.m */; };
+		F70DB1041B87E21200002933 /* NSArray+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F70DB1011B87E0C800002933 /* NSArray+CoreSync.m */; };
 		F77757ED1B0803190001FB9B /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EC1B0803190001FB9B /* CoreSync.m */; };
 		F77757F01B085A370001FB9B /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */; };
 		F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */; };
@@ -29,6 +33,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F70DB0FD1B87DFB000002933 /* NSDictionary+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreSync.h"; sourceTree = "<group>"; };
+		F70DB0FE1B87DFB000002933 /* NSDictionary+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreSync.m"; sourceTree = "<group>"; };
+		F70DB1001B87E0C800002933 /* NSArray+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreSync.h"; sourceTree = "<group>"; };
+		F70DB1011B87E0C800002933 /* NSArray+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreSync.m"; sourceTree = "<group>"; };
 		F77757E11B0802E40001FB9B /* CoreSync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreSync; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77757EB1B0803190001FB9B /* CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSync.h; sourceTree = "<group>"; };
 		F77757EC1B0803190001FB9B /* CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSync.m; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				F77757EF1B085A370001FB9B /* CoreSyncTransaction.m */,
 				F77757F11B09203E0001FB9B /* NSMutableDictionary+CoreSync.h */,
 				F77757F21B09203E0001FB9B /* NSMutableDictionary+CoreSync.m */,
+				F70DB0FD1B87DFB000002933 /* NSDictionary+CoreSync.h */,
+				F70DB0FE1B87DFB000002933 /* NSDictionary+CoreSync.m */,
+				F70DB1001B87E0C800002933 /* NSArray+CoreSync.h */,
+				F70DB1011B87E0C800002933 /* NSArray+CoreSync.m */,
 			);
 			path = CoreSync;
 			sourceTree = "<group>";
@@ -194,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70DB1021B87E0C800002933 /* NSArray+CoreSync.m in Sources */,
 				F77757F01B085A370001FB9B /* CoreSyncTransaction.m in Sources */,
 				F77757F31B09203E0001FB9B /* NSMutableDictionary+CoreSync.m in Sources */,
+				F70DB0FF1B87DFB000002933 /* NSDictionary+CoreSync.m in Sources */,
 				F77757ED1B0803190001FB9B /* CoreSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +222,8 @@
 				F779557C1B0C4CEC00359E79 /* CoreSyncTests.m in Sources */,
 				F7C1B1541B869705008D1E8F /* CoreSync.m in Sources */,
 				F7C1B1561B869705008D1E8F /* NSMutableDictionary+CoreSync.m in Sources */,
+				F70DB1041B87E21200002933 /* NSArray+CoreSync.m in Sources */,
+				F70DB1031B87E21000002933 /* NSDictionary+CoreSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
