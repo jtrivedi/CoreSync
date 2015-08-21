@@ -154,13 +154,6 @@
     }
 }
 
-- (NSString *)json
-{
-    NSError* error;
-    NSData* data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-}
-
 + (NSDictionary *)dictionaryWithJSON:(NSString *)json
 {
     NSError* error;

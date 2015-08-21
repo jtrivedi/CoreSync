@@ -13,8 +13,6 @@
 
 - (void)applyTransaction:(CoreSyncTransaction *)transaction;
 
-- (NSString *)json;
-
 + (NSDictionary *)dictionaryWithJSON:(NSString *)json;
 
 @end

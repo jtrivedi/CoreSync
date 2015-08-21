@@ -34,9 +34,8 @@ static const BOOL kShouldLog = NO;
     NSMutableArray* transactions = [self diffDictionary:a :b root:@""];
     
     NSArray* toArray = [self serializeTransactionsToArray:transactions];
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:toArray options:NSJSONWritingPrettyPrinted error:nil];
     
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return [self toJSON:toArray];
 }
 
 
@@ -257,6 +256,13 @@ static const BOOL kShouldLog = NO;
     return [dictionary.allKeys sortedArrayUsingComparator:^(id aK, id bK) {
         return [aK compare:bK options:NSNumericSearch];
     }];
+}
+
++ (NSString *)toJSON:(id)JSONObject
+{
+    NSError* error;
+    NSData* data = [NSJSONSerialization dataWithJSONObject:JSONObject options:NSJSONWritingPrettyPrinted error:&error];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 @end
