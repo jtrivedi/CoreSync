@@ -16,7 +16,7 @@ CoreSync is flexible, modular, and lightweight. It’s also extremely easy to us
 
 - [Download CoreSync](https://github.com/jtrivedi/CoreSync/archive/master.zip).
 - Try it out by opening the Xcode project and running the tests via the `CoreSyncTests` target. `CoreSyncTests.m` also provides an easy example of how to use the framework.
-- Install it in your own project by simply adding the CoreSync folder into your target, and `#import CoreSync.h`.
+- Install it in your own project by simply adding the CoreSync folder into your target, and `#import "CoreSync.h"`.
 
 ## Contributing
 
