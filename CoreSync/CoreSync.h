@@ -26,8 +26,8 @@
 /**
  *  Calculates the delta between two NSMutableDictionary instances.
  *
- *  @param a The old dictionary object.
- *  @param b The current dictionary object.
+ *  @param a The original dictionary object.
+ *  @param b The new dictionary object.
  *
  *  @return An array of CoreSyncTransaction objects that make up the difference between the two dictionaries.
  */
@@ -37,8 +37,8 @@
 /**
  *  Calculates the delta between two NSMutableDictionary instances.
  *
- *  @param a The old dictionary object.
- *  @param b The current dictionary object.
+ *  @param a The original dictionary object.
+ *  @param b The new dictionary object.
  *
  *  @return A JSON string representing an array of dictionaries representing CoreSyncTransaction objects.
  */
@@ -46,18 +46,22 @@
                         :(NSDictionary *)b;
 
 /**
- *  Sequentially applies each CoreSyncTransaction patch object in `transactions` to `a`. This "patches" `a`.
+ *  Creates a copy of `a` and sequentially applies each CoreSyncTransaction patch in `transactions` to it.
  *
- *  @param a            The dictionary to be patched.
+ *  @param a            The original dictionary to be patched.
  *  @param transactions An array of CoreSyncTransaction objects.
+ *
+ *  @return             A copy of the patched dictionary.
  */
 + (NSDictionary *)patch:(NSDictionary *)a withTransactions:(NSArray *)transactions;
 
 /**
- *  Deserializes the `json` parameter into an array of CoreSyncTransactions objects, then applies each transaction to `a`.
+ *  Deserializes the `json` parameter into an array of CoreSyncTransactions patch objects, then applies each transaction to a copy of `a`.
  *
- *  @param a    The dictionary to be patched.
+ *  @param a    The original dictionary to be patched.
  *  @param json The JSON string representing an array of JSON patches.
+ *
+ *  @return     A copy of the patched dictionary.
  */
 + (NSDictionary *)patch:(NSDictionary *)a withJSON:(NSString *)json;
 
