@@ -62,7 +62,7 @@ As expected, this will print:
   {
     "op" : "replace",
     "path" : "/a",
-    "value" : "aVal2"
+    "value" : "aValue2"
   },
   {
     "op" : "remove",
@@ -71,7 +71,7 @@ As expected, this will print:
   {
     "op" : "add",
     "path" : "/b",
-    "value" : "bVal"
+    "value" : "bValue1"
   }
 ]
 ```
