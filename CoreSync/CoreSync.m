@@ -194,7 +194,7 @@ static const BOOL kShouldLog = NO;
         if (! [self areEqual:a[i] :b[i]]) {
             
             NSNumber* index = [NSNumber numberWithInteger:i];
-            NSString* fullPath = [NSString stringWithFormat:@"%@/[%@]", root, index];
+            NSString* fullPath = [NSString stringWithFormat:@"%@/%@", root, index];
 
             if ([a[i] isKindOfClass:[NSDictionary class]]) {
                 [transactions addObjectsFromArray:[self diffDictionary:a[i] :b[i] root:fullPath]];
@@ -204,7 +204,7 @@ static const BOOL kShouldLog = NO;
             }
             else {
                 if (kShouldLog) {
-                    NSLog(@"Key: %@/[%lu] element changed: %@ -> %@", root, i, a[i], b[i]);
+                    NSLog(@"Key: %@/%lu element changed: %@ -> %@", root, i, a[i], b[i]);
                 }
                 
                 CoreSyncTransaction* edit = [self editWithPath:fullPath value:b[i]];
@@ -215,12 +215,12 @@ static const BOOL kShouldLog = NO;
 
     for (NSUInteger i = min; i < max; ++i) {
         NSNumber* index = [NSNumber numberWithInteger:i];
-        NSString* fullPath = [NSString stringWithFormat:@"%@/[%@]", root, index];
+        NSString* fullPath = [NSString stringWithFormat:@"%@/%@", root, index];
         
         if (b.count > a.count) {
             // Addition
             if (kShouldLog) {
-                NSLog(@"Key: %@/[%lu] element was added: %@", root, i, b[i]);
+                NSLog(@"Key: %@/%lu element was added: %@", root, i, b[i]);
             }
 
             CoreSyncTransaction* addition = [self additionWithPath:fullPath value:b[i]];
@@ -229,7 +229,7 @@ static const BOOL kShouldLog = NO;
         else {
             // Deletion
             if (kShouldLog) {
-                NSLog(@"Key: %@/[%lu] element was removed: %@", root, i, a[i]);   
+                NSLog(@"Key: %@/%lu element was removed: %@", root, i, a[i]);   
             }
             
             CoreSyncTransaction* deletion = [self deletionWithPath:fullPath];
