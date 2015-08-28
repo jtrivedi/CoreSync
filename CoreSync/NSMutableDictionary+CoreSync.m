@@ -115,34 +115,35 @@
             break;
         }
         
-        if ([pathComponent containsString:@"["]) {
-            NSString* component = pathComponent;
-            component = [self stripBrackets:component];
-            
-            target = target[[component intValue]];
+        if ([self isNumeric:pathComponent]) {
+            target = target[[pathComponent intValue]];
         }
         else {
             target = target[pathComponent];
         }
     }
     
-    if ([lastComponent containsString:@"["]) {
-        lastComponent = [self stripBrackets:lastComponent];
-    }
-    
     completionBlock(target, lastComponent);
-}
-
-- (NSString *)stripBrackets:(NSString *)string
-{
-    string = [string stringByReplacingOccurrencesOfString:@"[" withString:@""];
-    string = [string stringByReplacingOccurrencesOfString:@"]" withString:@""];
-    return string;
 }
 
 - (BOOL)isValueFromKeyPathArray:(NSString *)keyPath
 {
-    return [keyPath containsString:@"["];
+    NSArray* keyPathElements = [keyPath componentsSeparatedByString:@"."];
+    for (NSString* element in keyPathElements) {
+        if ([self isNumeric:element]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (BOOL)isNumeric:(NSString *)string
+{
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    if ([string rangeOfCharacterFromSet:notDigits].location == NSNotFound) {
+        return YES;
+    }
+    return NO;
 }
 
 - (NSString *)cleanKeyPath:(NSString *)keyPath
