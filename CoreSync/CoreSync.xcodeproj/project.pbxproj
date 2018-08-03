@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E20C505D21143122005FF509 /* CoreSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20C505321143122005FF509 /* CoreSync.framework */; };
+		E20C506421143122005FF509 /* CoreSyncFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C505621143122005FF509 /* CoreSyncFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20C507921143142005FF509 /* NSDictionary+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C506F21143142005FF509 /* NSDictionary+CoreSync.h */; };
+		E20C507A21143142005FF509 /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507021143142005FF509 /* CoreSyncTransaction.m */; };
+		E20C507B21143142005FF509 /* NSMutableDictionary+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507121143142005FF509 /* NSMutableDictionary+CoreSync.h */; };
+		E20C507C21143142005FF509 /* NSArray+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507221143142005FF509 /* NSArray+CoreSync.m */; };
+		E20C507D21143142005FF509 /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507321143142005FF509 /* CoreSync.m */; };
+		E20C507E21143142005FF509 /* NSDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507421143142005FF509 /* NSDictionary+CoreSync.m */; };
+		E20C507F21143142005FF509 /* NSArray+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507521143142005FF509 /* NSArray+CoreSync.h */; };
+		E20C508121143142005FF509 /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507721143142005FF509 /* NSMutableDictionary+CoreSync.m */; };
+		E20C508221143142005FF509 /* CoreSyncTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507821143142005FF509 /* CoreSyncTransaction.h */; };
+		E20C5095211431EA005FF509 /* CoreSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20C508C211431E9005FF509 /* CoreSync.framework */; };
+		E20C50A621143223005FF509 /* CoreSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C50A421143223005FF509 /* CoreSyncTests.m */; };
+		E20C50A721143223005FF509 /* CoreSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C50A421143223005FF509 /* CoreSyncTests.m */; };
+		E20C50AB21143238005FF509 /* CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507321143142005FF509 /* CoreSync.m */; };
+		E20C50AC21143238005FF509 /* CoreSyncTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507821143142005FF509 /* CoreSyncTransaction.h */; };
+		E20C50AD21143238005FF509 /* CoreSyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507021143142005FF509 /* CoreSyncTransaction.m */; };
+		E20C50AE21143238005FF509 /* NSArray+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507521143142005FF509 /* NSArray+CoreSync.h */; };
+		E20C50AF21143238005FF509 /* NSArray+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507221143142005FF509 /* NSArray+CoreSync.m */; };
+		E20C50B021143238005FF509 /* NSDictionary+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C506F21143142005FF509 /* NSDictionary+CoreSync.h */; };
+		E20C50B121143238005FF509 /* NSDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507421143142005FF509 /* NSDictionary+CoreSync.m */; };
+		E20C50B221143238005FF509 /* NSMutableDictionary+CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C507121143142005FF509 /* NSMutableDictionary+CoreSync.h */; };
+		E20C50B321143238005FF509 /* NSMutableDictionary+CoreSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C507721143142005FF509 /* NSMutableDictionary+CoreSync.m */; };
+		E20C50B42114323D005FF509 /* CoreSyncFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C505621143122005FF509 /* CoreSyncFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20C51032114376D005FF509 /* CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C51022114376C005FF509 /* CoreSync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20C51042114376D005FF509 /* CoreSync.h in Headers */ = {isa = PBXBuildFile; fileRef = E20C51022114376C005FF509 /* CoreSync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E20C505E21143122005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C504A21143122005FF509 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20C505221143122005FF509;
+			remoteInfo = CoreSync;
+		};
+		E20C5096211431EA005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C504A21143122005FF509 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20C508B211431E9005FF509;
+			remoteInfo = CoreSync;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E20C505321143122005FF509 /* CoreSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C505621143122005FF509 /* CoreSyncFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreSyncFramework.h; sourceTree = "<group>"; };
+		E20C505721143122005FF509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20C505C21143122005FF509 /* CoreSync iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreSync iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C506F21143142005FF509 /* NSDictionary+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreSync.h"; sourceTree = "<group>"; };
+		E20C507021143142005FF509 /* CoreSyncTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSyncTransaction.m; sourceTree = "<group>"; };
+		E20C507121143142005FF509 /* NSMutableDictionary+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CoreSync.h"; sourceTree = "<group>"; };
+		E20C507221143142005FF509 /* NSArray+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreSync.m"; sourceTree = "<group>"; };
+		E20C507321143142005FF509 /* CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSync.m; sourceTree = "<group>"; };
+		E20C507421143142005FF509 /* NSDictionary+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreSync.m"; sourceTree = "<group>"; };
+		E20C507521143142005FF509 /* NSArray+CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreSync.h"; sourceTree = "<group>"; };
+		E20C507721143142005FF509 /* NSMutableDictionary+CoreSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CoreSync.m"; sourceTree = "<group>"; };
+		E20C507821143142005FF509 /* CoreSyncTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSyncTransaction.h; sourceTree = "<group>"; };
+		E20C508C211431E9005FF509 /* CoreSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C5094211431E9005FF509 /* CoreSync macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreSync macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C50A421143223005FF509 /* CoreSyncTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSyncTests.m; sourceTree = "<group>"; };
+		E20C50A521143223005FF509 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20C51022114376C005FF509 /* CoreSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSync.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E20C504F21143122005FF509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C505921143122005FF509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C505D21143122005FF509 /* CoreSync.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5088211431E9005FF509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5091211431E9005FF509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C5095211431EA005FF509 /* CoreSync.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E20C504921143122005FF509 = {
+			isa = PBXGroup;
+			children = (
+				E20C505521143122005FF509 /* CoreSync */,
+				E20C50A321143223005FF509 /* CoreSyncTests */,
+				E20C505421143122005FF509 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E20C505421143122005FF509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E20C505321143122005FF509 /* CoreSync.framework */,
+				E20C505C21143122005FF509 /* CoreSync iOS Tests.xctest */,
+				E20C508C211431E9005FF509 /* CoreSync.framework */,
+				E20C5094211431E9005FF509 /* CoreSync macOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E20C505521143122005FF509 /* CoreSync */ = {
+			isa = PBXGroup;
+			children = (
+				E20C506E21143142005FF509 /* Sources */,
+				E20C506D21143131005FF509 /* Supporting Files */,
+			);
+			path = CoreSync;
+			sourceTree = "<group>";
+		};
+		E20C506D21143131005FF509 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E20C505621143122005FF509 /* CoreSyncFramework.h */,
+				E20C505721143122005FF509 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E20C506E21143142005FF509 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E20C51022114376C005FF509 /* CoreSync.h */,
+				E20C507321143142005FF509 /* CoreSync.m */,
+				E20C507821143142005FF509 /* CoreSyncTransaction.h */,
+				E20C507021143142005FF509 /* CoreSyncTransaction.m */,
+				E20C507521143142005FF509 /* NSArray+CoreSync.h */,
+				E20C507221143142005FF509 /* NSArray+CoreSync.m */,
+				E20C506F21143142005FF509 /* NSDictionary+CoreSync.h */,
+				E20C507421143142005FF509 /* NSDictionary+CoreSync.m */,
+				E20C507121143142005FF509 /* NSMutableDictionary+CoreSync.h */,
+				E20C507721143142005FF509 /* NSMutableDictionary+CoreSync.m */,
+			);
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
+		E20C50A321143223005FF509 /* CoreSyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				E20C50A421143223005FF509 /* CoreSyncTests.m */,
+				E20C50A521143223005FF509 /* Info.plist */,
+			);
+			path = CoreSyncTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E20C505021143122005FF509 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C506421143122005FF509 /* CoreSyncFramework.h in Headers */,
+				E20C507F21143142005FF509 /* NSArray+CoreSync.h in Headers */,
+				E20C507B21143142005FF509 /* NSMutableDictionary+CoreSync.h in Headers */,
+				E20C508221143142005FF509 /* CoreSyncTransaction.h in Headers */,
+				E20C51032114376D005FF509 /* CoreSync.h in Headers */,
+				E20C507921143142005FF509 /* NSDictionary+CoreSync.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5089211431E9005FF509 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50AE21143238005FF509 /* NSArray+CoreSync.h in Headers */,
+				E20C50B021143238005FF509 /* NSDictionary+CoreSync.h in Headers */,
+				E20C50B42114323D005FF509 /* CoreSyncFramework.h in Headers */,
+				E20C50AC21143238005FF509 /* CoreSyncTransaction.h in Headers */,
+				E20C51042114376D005FF509 /* CoreSync.h in Headers */,
+				E20C50B221143238005FF509 /* NSMutableDictionary+CoreSync.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E20C505221143122005FF509 /* CoreSync iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C506721143122005FF509 /* Build configuration list for PBXNativeTarget "CoreSync iOS" */;
+			buildPhases = (
+				E20C504E21143122005FF509 /* Sources */,
+				E20C504F21143122005FF509 /* Frameworks */,
+				E20C505021143122005FF509 /* Headers */,
+				E20C505121143122005FF509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreSync iOS";
+			productName = CoreSync;
+			productReference = E20C505321143122005FF509 /* CoreSync.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E20C505B21143122005FF509 /* CoreSync iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C506A21143122005FF509 /* Build configuration list for PBXNativeTarget "CoreSync iOS Tests" */;
+			buildPhases = (
+				E20C505821143122005FF509 /* Sources */,
+				E20C505921143122005FF509 /* Frameworks */,
+				E20C505A21143122005FF509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E20C505F21143122005FF509 /* PBXTargetDependency */,
+			);
+			name = "CoreSync iOS Tests";
+			productName = CoreSyncTests;
+			productReference = E20C505C21143122005FF509 /* CoreSync iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E20C508B211431E9005FF509 /* CoreSync macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C509D211431EA005FF509 /* Build configuration list for PBXNativeTarget "CoreSync macOS" */;
+			buildPhases = (
+				E20C5087211431E9005FF509 /* Sources */,
+				E20C5088211431E9005FF509 /* Frameworks */,
+				E20C5089211431E9005FF509 /* Headers */,
+				E20C508A211431E9005FF509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreSync macOS";
+			productName = CoreSync;
+			productReference = E20C508C211431E9005FF509 /* CoreSync.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E20C5093211431E9005FF509 /* CoreSync macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C50A0211431EA005FF509 /* Build configuration list for PBXNativeTarget "CoreSync macOS Tests" */;
+			buildPhases = (
+				E20C5090211431E9005FF509 /* Sources */,
+				E20C5091211431E9005FF509 /* Frameworks */,
+				E20C5092211431E9005FF509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E20C5097211431EA005FF509 /* PBXTargetDependency */,
+			);
+			name = "CoreSync macOS Tests";
+			productName = CoreSyncTests;
+			productReference = E20C5094211431E9005FF509 /* CoreSync macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E20C504A21143122005FF509 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = jtrivedi;
+				TargetAttributes = {
+					E20C505221143122005FF509 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E20C505B21143122005FF509 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E20C508B211431E9005FF509 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E20C5093211431E9005FF509 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E20C504D21143122005FF509 /* Build configuration list for PBXProject "CoreSync" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E20C504921143122005FF509;
+			productRefGroup = E20C505421143122005FF509 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E20C505221143122005FF509 /* CoreSync iOS */,
+				E20C505B21143122005FF509 /* CoreSync iOS Tests */,
+				E20C508B211431E9005FF509 /* CoreSync macOS */,
+				E20C5093211431E9005FF509 /* CoreSync macOS Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E20C505121143122005FF509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C505A21143122005FF509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C508A211431E9005FF509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5092211431E9005FF509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E20C504E21143122005FF509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C507D21143142005FF509 /* CoreSync.m in Sources */,
+				E20C507C21143142005FF509 /* NSArray+CoreSync.m in Sources */,
+				E20C507E21143142005FF509 /* NSDictionary+CoreSync.m in Sources */,
+				E20C507A21143142005FF509 /* CoreSyncTransaction.m in Sources */,
+				E20C508121143142005FF509 /* NSMutableDictionary+CoreSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C505821143122005FF509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50A621143223005FF509 /* CoreSyncTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5087211431E9005FF509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50AD21143238005FF509 /* CoreSyncTransaction.m in Sources */,
+				E20C50AF21143238005FF509 /* NSArray+CoreSync.m in Sources */,
+				E20C50B121143238005FF509 /* NSDictionary+CoreSync.m in Sources */,
+				E20C50AB21143238005FF509 /* CoreSync.m in Sources */,
+				E20C50B321143238005FF509 /* NSMutableDictionary+CoreSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20C5090211431E9005FF509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50A721143223005FF509 /* CoreSyncTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E20C505F21143122005FF509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20C505221143122005FF509 /* CoreSync iOS */;
+			targetProxy = E20C505E21143122005FF509 /* PBXContainerItemProxy */;
+		};
+		E20C5097211431EA005FF509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20C508B211431E9005FF509 /* CoreSync macOS */;
+			targetProxy = E20C5096211431EA005FF509 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E20C506521143122005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E20C506621143122005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E20C506821143122005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/CoreSync/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSync;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreSync;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E20C506921143122005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/CoreSync/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSync;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreSync;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E20C506B21143122005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E20C506C21143122005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E20C509E211431EA005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreSync/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSync;
+				PRODUCT_NAME = CoreSync;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E20C509F211431EA005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreSync/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSync;
+				PRODUCT_NAME = CoreSync;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E20C50A1211431EA005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E20C50A2211431EA005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CoreSyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtrivedi.CoreSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E20C504D21143122005FF509 /* Build configuration list for PBXProject "CoreSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C506521143122005FF509 /* Debug */,
+				E20C506621143122005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20C506721143122005FF509 /* Build configuration list for PBXNativeTarget "CoreSync iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C506821143122005FF509 /* Debug */,
+				E20C506921143122005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20C506A21143122005FF509 /* Build configuration list for PBXNativeTarget "CoreSync iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C506B21143122005FF509 /* Debug */,
+				E20C506C21143122005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20C509D211431EA005FF509 /* Build configuration list for PBXNativeTarget "CoreSync macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C509E211431EA005FF509 /* Debug */,
+				E20C509F211431EA005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20C50A0211431EA005FF509 /* Build configuration list for PBXNativeTarget "CoreSync macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C50A1211431EA005FF509 /* Debug */,
+				E20C50A2211431EA005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E20C504A21143122005FF509 /* Project object */;
+}
