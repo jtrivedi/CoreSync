@@ -115,7 +115,7 @@
             break;
         }
         
-        if ([self isNumeric:pathComponent]) {
+        if ([self isNumeric:pathComponent] && [target respondsToSelector:@selector(objectAtIndexedSubscript:)]) {
             target = target[[pathComponent intValue]];
         }
         else {
