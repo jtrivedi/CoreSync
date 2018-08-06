@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E20C50C42114348D005FF509 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C50C32114348D005FF509 /* AppDelegate.m */; };
+		E20C50C72114348D005FF509 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C50C62114348D005FF509 /* ViewController.m */; };
+		E20C50CA2114348D005FF509 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20C50C82114348D005FF509 /* Main.storyboard */; };
+		E20C50CC2114348F005FF509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C50CB2114348F005FF509 /* Assets.xcassets */; };
+		E20C50CF2114348F005FF509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20C50CD2114348F005FF509 /* LaunchScreen.storyboard */; };
+		E20C50D22114348F005FF509 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C50D12114348F005FF509 /* main.m */; };
+		E20C50F921143521005FF509 /* CoreSync_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20C50F221143513005FF509 /* CoreSync_iOS.framework */; };
+		E20C50FA21143521005FF509 /* CoreSync_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E20C50F221143513005FF509 /* CoreSync_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E20C5106211437C1005FF509 /* ViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C5105211437C1005FF509 /* ViewControllerSwift.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E20C50F121143513005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E20C505321143122005FF509;
+			remoteInfo = "CoreSync iOS";
+		};
+		E20C50F321143513005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E20C505C21143122005FF509;
+			remoteInfo = "CoreSync iOS Tests";
+		};
+		E20C50F521143513005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E20C508C211431E9005FF509;
+			remoteInfo = "CoreSync macOS";
+		};
+		E20C50F721143513005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E20C5094211431E9005FF509;
+			remoteInfo = "CoreSync macOS Tests";
+		};
+		E20C50FB21143521005FF509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E20C505221143122005FF509;
+			remoteInfo = "CoreSync iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E20C50E7211434DB005FF509 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E20C50FA21143521005FF509 /* CoreSync_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E20C50BF2114348D005FF509 /* CoreSync Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreSync Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C50C22114348D005FF509 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E20C50C32114348D005FF509 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E20C50C52114348D005FF509 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E20C50C62114348D005FF509 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E20C50C92114348D005FF509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E20C50CB2114348F005FF509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E20C50CE2114348F005FF509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E20C50D02114348F005FF509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20C50D12114348F005FF509 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E20C50E92114350B005FF509 /* CoreSync_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSync_iOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CoreSync-gwshxjfbtzyhaogmqzjcbcqzabqj/Build/Products/Debug-iphoneos/CoreSync_iOS.framework"; sourceTree = "<group>"; };
+		E20C50EA21143512005FF509 /* CoreSync.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreSync.xcodeproj; path = ../../CoreSync/CoreSync.xcodeproj; sourceTree = "<group>"; };
+		E20C5105211437C1005FF509 /* ViewControllerSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSwift.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E20C50BC2114348D005FF509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50F921143521005FF509 /* CoreSync_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E20C50B62114348D005FF509 = {
+			isa = PBXGroup;
+			children = (
+				E20C50C12114348D005FF509 /* CoreSync Example */,
+				E20C50C02114348D005FF509 /* Products */,
+				E20C50E821143508005FF509 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E20C50C02114348D005FF509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E20C50BF2114348D005FF509 /* CoreSync Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E20C50C12114348D005FF509 /* CoreSync Example */ = {
+			isa = PBXGroup;
+			children = (
+				E20C50C22114348D005FF509 /* AppDelegate.h */,
+				E20C50C32114348D005FF509 /* AppDelegate.m */,
+				E20C50C52114348D005FF509 /* ViewController.h */,
+				E20C50C62114348D005FF509 /* ViewController.m */,
+				E20C5105211437C1005FF509 /* ViewControllerSwift.swift */,
+				E20C50C82114348D005FF509 /* Main.storyboard */,
+				E20C50CB2114348F005FF509 /* Assets.xcassets */,
+				E20C50CD2114348F005FF509 /* LaunchScreen.storyboard */,
+				E20C50D02114348F005FF509 /* Info.plist */,
+				E20C50D12114348F005FF509 /* main.m */,
+			);
+			path = "CoreSync Example";
+			sourceTree = "<group>";
+		};
+		E20C50E821143508005FF509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E20C50EA21143512005FF509 /* CoreSync.xcodeproj */,
+				E20C50E92114350B005FF509 /* CoreSync_iOS.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E20C50EB21143512005FF509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E20C50F221143513005FF509 /* CoreSync_iOS.framework */,
+				E20C50F421143513005FF509 /* CoreSync iOS Tests.xctest */,
+				E20C50F621143513005FF509 /* CoreSync_macOS.framework */,
+				E20C50F821143513005FF509 /* CoreSync macOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E20C50BE2114348D005FF509 /* CoreSync Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C50D52114348F005FF509 /* Build configuration list for PBXNativeTarget "CoreSync Example" */;
+			buildPhases = (
+				E20C50BB2114348D005FF509 /* Sources */,
+				E20C50BC2114348D005FF509 /* Frameworks */,
+				E20C50BD2114348D005FF509 /* Resources */,
+				E20C50E7211434DB005FF509 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E20C50FC21143521005FF509 /* PBXTargetDependency */,
+			);
+			name = "CoreSync Example";
+			productName = "CoreSync Example";
+			productReference = E20C50BF2114348D005FF509 /* CoreSync Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E20C50B72114348D005FF509 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = jtrivedi;
+				TargetAttributes = {
+					E20C50BE2114348D005FF509 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = E20C50BA2114348D005FF509 /* Build configuration list for PBXProject "CoreSync Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E20C50B62114348D005FF509;
+			productRefGroup = E20C50C02114348D005FF509 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E20C50EB21143512005FF509 /* Products */;
+					ProjectRef = E20C50EA21143512005FF509 /* CoreSync.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E20C50BE2114348D005FF509 /* CoreSync Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E20C50F221143513005FF509 /* CoreSync_iOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreSync_iOS.framework;
+			remoteRef = E20C50F121143513005FF509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E20C50F421143513005FF509 /* CoreSync iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CoreSync iOS Tests.xctest";
+			remoteRef = E20C50F321143513005FF509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E20C50F621143513005FF509 /* CoreSync_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreSync_macOS.framework;
+			remoteRef = E20C50F521143513005FF509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E20C50F821143513005FF509 /* CoreSync macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CoreSync macOS Tests.xctest";
+			remoteRef = E20C50F721143513005FF509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E20C50BD2114348D005FF509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C50CF2114348F005FF509 /* LaunchScreen.storyboard in Resources */,
+				E20C50CC2114348F005FF509 /* Assets.xcassets in Resources */,
+				E20C50CA2114348D005FF509 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E20C50BB2114348D005FF509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20C5106211437C1005FF509 /* ViewControllerSwift.swift in Sources */,
+				E20C50C72114348D005FF509 /* ViewController.m in Sources */,
+				E20C50D22114348F005FF509 /* main.m in Sources */,
+				E20C50C42114348D005FF509 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E20C50FC21143521005FF509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CoreSync iOS";
+			targetProxy = E20C50FB21143521005FF509 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E20C50C82114348D005FF509 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20C50C92114348D005FF509 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E20C50CD2114348F005FF509 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20C50CE2114348F005FF509 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E20C50D32114348F005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E20C50D42114348F005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E20C50D62114348F005FF509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoreSync Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jtrivedi.CoreSync-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E20C50D72114348F005FF509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoreSync Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jtrivedi.CoreSync-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E20C50BA2114348D005FF509 /* Build configuration list for PBXProject "CoreSync Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C50D32114348F005FF509 /* Debug */,
+				E20C50D42114348F005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20C50D52114348F005FF509 /* Build configuration list for PBXNativeTarget "CoreSync Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20C50D62114348F005FF509 /* Debug */,
+				E20C50D72114348F005FF509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E20C50B72114348D005FF509 /* Project object */;
+}
