@@ -51,10 +51,10 @@
     else {
         // Array
         [self returnTargetWithKeyPath:keyPath completionBlock:^(id target, NSString *lastComponent) {
-            if ([target isKindOfClass:[NSArray class]]) {
+            if ([target respondsToSelector:@selector(addObject:)]) {
                 [(NSMutableArray *)target addObject:transaction.value];
             }
-            else if ([target isKindOfClass:[NSDictionary class]]) {
+            else if ([target respondsToSelector:@selector(setObject:forKey:)]) {
                 [(NSMutableDictionary *)target setObject:transaction.value forKey:lastComponent];
             }
         }];
@@ -72,10 +72,10 @@
     else {
         // Array
         [self returnTargetWithKeyPath:keyPath completionBlock:^(id target, NSString *lastComponent) {
-            if ([target isKindOfClass:[NSArray class]]) {
+            if ([target respondsToSelector:@selector(removeObjectAtIndex:)]) {
                 [(NSMutableArray *)target removeObjectAtIndex:[lastComponent intValue]];
             }
-            else if ([target isKindOfClass:[NSDictionary class]]) {
+            else if ([target respondsToSelector:@selector(removeObjectForKey:)]) {
                 [(NSMutableDictionary *)target removeObjectForKey:lastComponent];
             }
         }];
@@ -93,10 +93,10 @@
     else {
         // Array
         [self returnTargetWithKeyPath:keyPath completionBlock:^(id target, NSString *lastComponent) {
-            if ([target isKindOfClass:[NSArray class]]) {
+            if ([target respondsToSelector:@selector(replaceObjectAtIndex:withObject:)]) {
                 [(NSMutableArray *)target replaceObjectAtIndex:[lastComponent intValue] withObject:transaction.value];
             }
-            else if ([target isKindOfClass:[NSDictionary class]]) {
+            else if ([target respondsToSelector:@selector(setObject:forKey:)]) {
                 [(NSMutableDictionary *)target setObject:transaction.value forKey:lastComponent];
             }
         }];
